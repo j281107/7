@@ -1,1 +1,20 @@
+1)
+int main()
+{
+ setlocale(LC_ALL, "RU");
+ srand(time(NULL));
+ int a = 1; 
+ int b = 2;
+ int c = 3;
+ int temp;
+ int *aPtr = &a, *bPtr = &b, *cPtr = &c;
+ int *tempPtr = &temp;
+ *tempPtr = *bPtr;
+ *bPtr = *cPtr;
+ *cPtr = *aPtr;
+ *aPtr = *tempPtr;
+ cout<<a<<b<<c<<"\n";
+ return 0; 
+}
 
+2)
