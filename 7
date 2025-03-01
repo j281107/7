@@ -100,5 +100,27 @@ int fact(int* p)
             return *p * fact(&t);
         }
     }
-
+5.
+int main()
+{
+	setlocale(LC_ALL, "RU");
+	srand(time(NULL));
+    using namespace std;
+    int n = 1221;
+    string s = to_string(n);
+    int l = 0;
+    int r = s.size() - 1;
+    while (l < r) 
+    {
+        if (s[l] != s[r])
+        {
+            cout << "Не является палиндромом";
+            return 0;
+        }
+       
+        l++, r--;
+    }
+    
+    cout << "Палиндром";
+    return 0;
 }
