@@ -18,3 +18,27 @@ int main()
 }
 
 2)
+#include <iostream>
+
+int main()
+{
+	setlocale(LC_ALL, "RU");
+	srand(time(NULL));
+    int const size = 5;
+    int ar[size];
+    int min = *ar;
+    int number_min = 0;
+
+    for (int i = 1; i < size; i++)
+    {
+
+        if (min > *(ar + i))
+        {
+            min = *(ar + i);
+            number_min = i;
+        }
+      cout << "Минимум равен: " << min << " и его порядковый номер в массиве " << number_min + 1 << endl;
+
+    }
+   	return 0;
+}
